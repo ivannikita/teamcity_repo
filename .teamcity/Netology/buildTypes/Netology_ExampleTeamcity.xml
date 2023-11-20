@@ -34,6 +34,9 @@
         </parameters>
       </runner>
       <runner id="RUNNER_4" name="bulid artifact" type="Maven2">
+        <conditions>
+          <contains name="teamcity.build.branch" value="master" />
+        </conditions>
         <parameters>
           <param name="goals" value="clean compile install" />
           <param name="localRepoScope" value="agent" />
